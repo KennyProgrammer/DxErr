@@ -1,3 +1,4 @@
+#if CTX_PLATFORM_WINDOWS
 //--------------------------------------------------------------------------------------
 // File: DXErr.h
 //
@@ -10,9 +11,7 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
-
 #pragma once
-#include "ChiliWin.h"
 #include <sal.h>
 
 #ifdef __cplusplus
@@ -101,3 +100,4 @@ HRESULT WINAPI DXTraceA( _In_z_ const CHAR* strFile, _In_ DWORD dwLine, _In_ HRE
 #ifdef __cplusplus
 }
 #endif //__cplusplus
+#endif //CTX_PLATFORM_WINDOWS

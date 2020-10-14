@@ -6,8 +6,9 @@ if ( !count )
 // First try to see if FormatMessage knows this hr
 UINT icount = static_cast<UINT>( std::min<size_t>( count, 32767 ) );
 
-DWORD result = DX_FORMATMESSAGE( FORMAT_MESSAGE_FROM_SYSTEM, nullptr, hr,
-                                MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), desc, icount, nullptr );
+//CTXEngine: Change
+DWORD result = DX_FORMATMESSAGE(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, desc, hr,
+                                MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US), desc, icount, nullptr );
 
 if (result > 0)
     return;

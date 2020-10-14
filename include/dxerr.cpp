@@ -1,3 +1,6 @@
+#include "CTXEnginePreCompile.h"
+
+#if CTX_PLATFORM_WINDOWS
 //--------------------------------------------------------------------------------------
 // File: DXErr.cpp
 //
@@ -159,7 +162,7 @@ void WINAPI DXGetErrorDescriptionW( _In_ HRESULT hr, _Out_cap_(count) WCHAR* des
 #define CHK_ERRA CHK_ERRA_W
 #define CHK_ERR CHK_ERR_W
 #define DX_FORMATMESSAGE FormatMessageW
-#include "DXGetErrorDescription.inl"
+#include "DXGetErrorDiscription.inl"
 #undef DX_FORMATMESSAGE
 #undef CHK_ERRA
 #undef CHK_ERR
@@ -170,7 +173,7 @@ void WINAPI DXGetErrorDescriptionA( _In_ HRESULT hr, _Out_cap_(count) CHAR* desc
 #define CHK_ERRA CHK_ERRA_A
 #define CHK_ERR CHK_ERR_A
 #define DX_FORMATMESSAGE FormatMessageA
-#include "DXGetErrorDescription.inl"
+#include "DXGetErrorDiscription.inl"
 #undef DX_FORMATMESSAGE
 #undef CHK_ERRA
 #undef CHK_ERR
@@ -224,3 +227,4 @@ HRESULT WINAPI DXTraceA( _In_z_ const CHAR* strFile, _In_ DWORD dwLine, _In_ HRE
 #undef DX_OUTPUTDEBUGSTRING
 #undef DX_GETERRORSTRING
 }
+#endif
