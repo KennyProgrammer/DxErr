@@ -1,6 +1,4 @@
-#include "ForcePreCompile.h"
-
-#if CTX_PLATFORM_WINDOWS
+#if FE_PLATFORM_WINDOWS
 //--------------------------------------------------------------------------------------
 // File: DXErr.cpp
 //
