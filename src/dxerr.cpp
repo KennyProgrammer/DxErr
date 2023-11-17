@@ -1,4 +1,3 @@
-#if FE_PLATFORM_WINDOWS
 //--------------------------------------------------------------------------------------
 // File: DXErr.cpp
 //
@@ -225,4 +224,3 @@ HRESULT WINAPI DXTraceA( _In_z_ const CHAR* strFile, _In_ DWORD dwLine, _In_ HRE
 #undef DX_OUTPUTDEBUGSTRING
 #undef DX_GETERRORSTRING
 }
-#endif

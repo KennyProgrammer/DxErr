@@ -1,4 +1,4 @@
-#if FE_PLATFORM_WINDOWS
+
 //--------------------------------------------------------------------------------------
 // File: DXErr.h
 //
@@ -103,4 +103,3 @@ HRESULT WINAPI DXTraceA( _In_z_ const CHAR* strFile, _In_ DWORD dwLine, _In_ HRE
 #ifdef __cplusplus
 }
 #endif //__cplusplus
-#endif //CTX_PLATFORM_WINDOWS
