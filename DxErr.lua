@@ -2,14 +2,17 @@
 -- Main Premake5 file for building Windows DirectX Error project.
 -- Copyright (c) 2020-2023 by Danil (Kenny) Dukhovenko, All rights reserved.
 --
+-- Requirement:
+--  - ForceEngine.lua
+--
 
 -- Windows DirectX Error C++ Project
 project "DxErr"
-	kind "StaticLib"
-	language "C++"
+	kind          "StaticLib"
+	language      "C++"
 	staticruntime "on"
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir      ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/lib")
+	objdir         ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/obj")
 	
 	includedirs {
 		"include",
