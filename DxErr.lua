@@ -11,8 +11,8 @@ project "DxErr"
 	kind          "StaticLib"
 	language      "C++"
 	staticruntime "on"
-	targetdir      ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/lib")
-	objdir         ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/obj")
+	targetdir      ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Lib")
+	objdir         ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Obj")
 	
 	includedirs {
 		"include",
